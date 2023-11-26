@@ -24,8 +24,8 @@ export class TableComponent {
 
   @Output() headItemSort: EventEmitter<any> = new EventEmitter<any>();
   @Input() dataSource: UiTable = new UiTable();
-  @Input() sortColumnName: string = '';
   @Input() typeTable: 'books' | 'authors'
+  @Input() titleTable: string = ''
 
   constructor() {
 

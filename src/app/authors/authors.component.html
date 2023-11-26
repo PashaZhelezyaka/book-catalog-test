@@ -1,5 +1,8 @@
-<app-form-authors></app-form-authors>
-<app-table
-  [dataSource]="tableData"
->
-</app-table>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <app-form-authors></app-form-authors>
+  </div>
+  <div>
+    <app-table [dataSource]="tableData" titleTable="Авторы"></app-table>
+  </div>
+</div>
