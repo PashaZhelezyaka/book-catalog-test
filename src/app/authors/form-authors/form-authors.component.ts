@@ -11,6 +11,7 @@ export class FormAuthorsComponent implements OnInit {
 
   form!: FormGroup;
   invalid: boolean = false
+  errorMessage: string
 
   constructor(
     private fb: FormBuilder,
@@ -25,6 +26,9 @@ export class FormAuthorsComponent implements OnInit {
       patronymic: ['', [Validators.required]],
       date: ['', [Validators.required]],
     });
+    this.authorsService.errorMessage$.subscribe(message => {
+      this.errorMessage = message;
+    });
   }
 
   save() {
@@ -35,7 +39,9 @@ export class FormAuthorsComponent implements OnInit {
       this.form.get('id').setValue(Math.floor(1000 + Math.random() * 9000))
       this.invalid = this.form.invalid
       this.authorsService.saveAuthor(this.form.value)
-      this.form.reset()
+      if(!this.errorMessage){
+        this.form.reset()
+      }
     }
   }
 

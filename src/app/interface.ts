@@ -5,3 +5,11 @@ export interface Author {
   patronymic: string,
   date: string
 }
+
+export interface Books {
+  id: number,
+  author: string,
+  title: string,
+  publisher: string,
+  year: string
+}

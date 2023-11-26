@@ -1,6 +1,9 @@
 <form class="row" [formGroup]="form">
   <div *ngIf="invalid" class="error-message">
-    Пожалуйста, заполните все поля.
+    <h4> Пожалуйста, заполните все поля. </h4>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    <h4> {{ errorMessage }} </h4>
   </div>
   <div class="col-md-6">
     <div class="mb-3">
