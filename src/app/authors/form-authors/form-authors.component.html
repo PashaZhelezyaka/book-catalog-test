@@ -1,0 +1,31 @@
+<form class="row" [formGroup]="form">
+  <div *ngIf="invalid" class="error-message">
+    Пожалуйста, заполните все поля.
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label">Фамилия</label>
+      <input formControlName="surname" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Имя</label>
+      <input formControlName="name" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label">Отчество</label>
+      <input formControlName="patronymic" type="text" class="form-control">
+      <div class="invalid-feedback">
+        Please enter a message in the textarea.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Дата рождения</label>
+      <input formControlName="date" type="date" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-12 text-md-end">
+    <button (click)="save()" type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>

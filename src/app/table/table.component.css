@@ -1,0 +1,41 @@
+.ek-tab {
+  height: auto !important;
+  overflow: scroll !important;
+  width: auto;
+}
+
+.ui-table {
+  font-family: "Ubuntu", serif;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 16%);
+  width: 100%;
+}
+
+.ui-table_header {
+  color: #151514;
+  justify-content: flex-start;
+  text-align: left;
+  background-color: #F4F3EE;
+}
+
+.ui-table_header th {
+  padding: 10px 15px;
+}
+
+.ui-table_content {
+  background-color: #F7FFF5;
+  cursor: pointer;
+}
+
+.ui-table_content tr {
+  border-bottom: 1px solid #DDE1DC;
+}
+
+.ui-table_content td {
+  padding: 10px 15px;
+}
+
+
+.line_matching:hover {
+  background-color: #e8ffe8;
+}

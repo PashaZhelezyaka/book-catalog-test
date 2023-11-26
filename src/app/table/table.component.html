@@ -1,1 +1,22 @@
-<p>table</p>
+<div class="ek-tab">
+  <table class="ui-table" *ngIf="dataSource.columns.length">
+    <thead class="ui-table_header">
+    <tr>
+      <th *ngFor="let head of dataSource.columns" (click)="headItemSort.emit(head)">
+        <p style="cursor: pointer">{{head}}</p>
+      </th>
+    </tr>
+    </thead>
+    <tbody class="ui-table_content">
+    <tr class="line_matching" *ngFor="let row of dataSource.rows">
+
+      <td *ngFor="let cell of row.cells; let i = index">
+        {{cell}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

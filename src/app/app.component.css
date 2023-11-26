@@ -1,6 +1,7 @@
 .content {
   margin-top: 15vh;
   margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 @media screen and (max-width: 990px) {

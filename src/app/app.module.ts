@@ -10,6 +10,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TableComponent } from "./table/table.component";
 import { MatTableModule } from "@angular/material/table";
 import { MatSortModule } from "@angular/material/sort";
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormAuthorsComponent } from './authors/form-authors/form-authors.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,16 +22,21 @@ import { MatSortModule } from "@angular/material/sort";
     BooksComponent,
     AuthorsComponent,
     TableComponent,
-    HeaderComponent
+    HeaderComponent,
+    FormAuthorsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
