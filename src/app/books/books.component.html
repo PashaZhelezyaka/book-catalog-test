@@ -1,1 +1,8 @@
-<p>books works!</p>
+<app-form-books></app-form-books>
+<app-table
+  [dataSource]="tableData"
+  [sortColumnName]="sortColumnName"
+  typeTable="books"
+  (headItemSort)="onHeadItemSort($event)"
+>
+</app-table>

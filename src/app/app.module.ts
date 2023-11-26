@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormAuthorsComponent } from './authors/form-authors/form-authors.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { FormBooksComponent } from './books/form-books/form-books.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     TableComponent,
     HeaderComponent,
     FormAuthorsComponent,
+    FormBooksComponent,
   ],
   imports: [
     BrowserModule,

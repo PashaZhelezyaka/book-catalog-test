@@ -22,9 +22,10 @@ export class UiTable {
 })
 export class TableComponent {
 
-  @Output() removeItem: EventEmitter<any> = new EventEmitter<any>();
   @Output() headItemSort: EventEmitter<any> = new EventEmitter<any>();
   @Input() dataSource: UiTable = new UiTable();
+  @Input() sortColumnName: string = '';
+  @Input() typeTable: 'books' | 'authors'
 
   constructor() {
 

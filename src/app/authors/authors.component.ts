@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthorsService } from "./authors.service";
-import { Author } from "../interface";
+import { Author } from "../interfaces/interface";
 
 @Component({
   selector: 'app-authors',
@@ -31,17 +31,17 @@ export class AuthorsComponent implements OnInit {
     })
   }
 
-  setTableData(data: any[]) {
+  setTableData(data: Author[]) {
     this.tableData.columns = ['Id', 'Фамилия', 'Имя', 'Отчество', 'Дата рождения']
     this.tableData.rows = data.map((item: any) => {
       return {
-        id: item.id ?? '',
+        id: item.id,
         cells: [
           item.id,
           item.surname,
-          item.name ?? '',
-          item.patronymic ?? '',
-          item.date ?? '',
+          item.name,
+          item.patronymic,
+          item.date,
         ],
         data: item
       }
